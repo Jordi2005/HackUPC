@@ -30,7 +30,7 @@ Project is created with:
 
 ## Authors
 Colabolators in the project: 
-* [Víctor Ariño Pellejero](https://github.com/AlvaroFrancoHackUPC1)
+* [Taiabur](https://github.com/taiaburbd)
+* [Álvaro Franco Fernandez](https://github.com/AlvaroFrancoHackUPC1)
 * [Jordi Castillo](https://github.com/Jordi2005)
 * [Víctor Ariño Pellejero](https://github.com/vTH0R)
-* [Taiabur](https://github.com/taiaburbd)
