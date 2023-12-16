@@ -9,6 +9,7 @@ Chat bot about sex education
 * Create a Virtual Environment `python -m venv .venv`
 * Activate the Virtual Environment `source venv/bin/activate`
 * install `requirements.txt` file `pip install -r requirements.txt`
+* run `flask run`
 
 ## Environment 
 
