@@ -1,0 +1,115 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Chat App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Flask Chat App</h1>
+    <form action="{{ url_for('chat') }}" method="post">
+        <label>Gender</label>
+        <select id="gender" name="gender" oninput="generateSentence()">
+            <option value=""></option>
+            <option value="Home">Home</option>
+            <option value="Dona">Dona</option>
+        </select><br/>
+        <label>Age</label>
+        <select id="age" name="age" oninput="generateSentence()">
+            <option value=""></option>
+            <option value="12 years old">12 years old</option>
+            <option value="16 years old">16 years old</option>
+            <option value="18 years old">18 years old</option>
+        </select><br/>
+        <label>Category</label>
+        <select id="category" name="category" oninput="generateSentence()">
+            <option value=""></option>
+            <option value="Heterogeneous">Heterogeneous</option>
+            <option value="Lesbian">Lesbian</option>
+            <option value="Gay">Gay</option>
+            <option value="Bisexual">Bisexual</option>
+            <option value="Transgender">Transgender</option>
+            <option value="Queer">Queer</option>
+            <option value="Intersex">Intersex</option>
+        </select><br/>
+        <label>Response</label>
+        <select id="responseType" oninput="generateSentence()">
+            <option value=""></option>
+            <option value="General">General</option>
+            <option value="Smart">Smart</option>
+        </select><br/>
+        <label for="user_message">Enter your message:</label>
+        <input type="hidden" id="user_message" name="user_message" required>
+        <!-- <div id="input_txt"></div> -->
+        <div id="output" class="alert alert-info"></div>
+        <button type="submit">Send</button>
+    </form>
+
+    
+
+    <div id="response" class="alert alert-success"></div>
+    <h1>Top 6 Questions</h1>
+    <ul>
+        {% for row in questions %}
+            <li>{{ row[3]}}</li>
+        {% endfor %}
+    </ul>
+    <h1>Top 6 Questions: all data</h1>
+    <ul>
+        {% for row in questions %}
+            <li>{{ row}}</li>
+        {% endfor %}
+    </ul>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const responseDiv = document.getElementById('response');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const formData = new FormData(form);
+                var userMessage = document.getElementById("user_message").value;
+                // document.getElementById("input_txt").innerText = userMessage
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    responseDiv.innerText = `Server says: ${data}`;
+
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+        });
+        function generateSentence() {
+            // Get selected values from dropdowns
+            var gender = document.getElementById("gender").value;
+            var age = document.getElementById("age").value;
+            var category = document.getElementById("category").value;
+            var responseType = document.getElementById("responseType").value;
+            var userMessage = document.getElementById("user_message").value;
+
+            // Generate a sentence based on selected values
+            var sentence = "I am ";
+            if (age) sentence += age + ", ";
+            if (gender) sentence += gender + ", Like ";
+            
+            if (category) sentence += category + " sexcual activeity, Please suggest ";
+            if (responseType) sentence += responseType + " advice for me ";
+            // if (userMessage) sentence += "and your message is: '" + userMessage + "'.";
+
+            // Display the generated sentence in the output div
+            document.getElementById("output").innerText = sentence.trim(); // Trim to remove trailing comma and space
+            document.getElementById("user_message").value = sentence.trim(); // Trim to remove trailing comma and space
+        }
+    </script>
+</body>
+</html>
