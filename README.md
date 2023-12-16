@@ -3,7 +3,7 @@ Chat bot about sex education
 
 ## Installation step
 
-* git clone `https://github.com/Jordi2005/HackUPC.git`
+* `git clone https://github.com/Jordi2005/HackUPC.git`
 * create `.env` file
 * pip install virtualenv
 * Create a Virtual Environment `python -m venv .venv`
