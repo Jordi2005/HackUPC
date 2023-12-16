@@ -57,12 +57,39 @@
 <div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
   <div id="pageintro" class="hoc clear"> 
     <!-- ################################################################################################ -->
-    <article>
-      <p>Sed diam et lacinia aliquam</p>
-      <h3 class="heading">Viverra massa malesuada</h3>
-      <p>Consectetur in dolor vitae consectetur maecenas id ultrices</p>
-      <footer><a class="btn" href="#">Dolor nam hendrerit</a></footer>
-    </article>
+    <form action="{{ url_for('chat') }}" method="post">
+      <label>Gender</label>
+      <select id="gender" name="gender" oninput="generateSentence()">
+          <option value=""></option>
+          <option value="Man">Man</option>
+          <option value="Women">Women</option>
+      </select><br/>
+      <label>Age</label>
+      <div class="slider"><input type="range" min="0" max="100" value="20" oninput="rangeValue.innerText = this.value"><p id="rangeValue">20</p></div> 
+   
+      <select id="category" name="category" oninput="generateSentence()">
+          <option value=""></option>
+          <option value="Heterosexual">Heterosexual</option>
+          <option value="Lesbian">Lesbian</option>
+          <option value="Gay">Gay</option>
+          <option value="Bisexual">Bisexual</option>
+          <option value="Transgender">Transgender</option>
+          <option value="Queer">Queer</option>
+          <option value="Intersex">Intersex</option>
+      </select><br/>
+      <label>Response</label>
+      <select id="responseType" oninput="generateSentence()">
+          <option value=""></option>
+          <option value="General">General</option>
+          <option value="Smart">Smart</option>
+          
+      </select><br/>
+      <label for="user_message">Enter your message:</label>
+      <input type="hidden" id="user_message" name="user_message" required>
+      <!-- <div id="input_txt"></div> -->
+      <div id="output" class="alert alert-info"></div>
+      <button type="submit">Send</button>
+  </form>
     <!-- ################################################################################################ -->
   </div>
 </div>
