@@ -27,6 +27,24 @@ def index():
 
     return render_template('index.html', questions=rows)
 
+@app.route('/app')
+def appindex():
+    # Connect to SQLite database
+    conn = sqlite3.connect('teenEdge.db')
+    cursor = conn.cursor()
+
+    # Select top 6 questions based on counter
+    cursor.execute('''
+        SELECT * FROM user_question_bank
+        ORDER BY counter DESC
+        LIMIT 6
+    ''')
+
+    # Fetch and print the result
+    rows = cursor.fetchall()
+
+    return render_template('app.index.html', questions=rows)
+
 
 def insert_data_to_db(gender, age, category, response_content, user_message):
     conn = sqlite3.connect('teenEdge.db') 

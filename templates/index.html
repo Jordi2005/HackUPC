@@ -3,7 +3,7 @@
 <html lang="">
 <!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
 <head>
-<title>TeenEdge</title>
+<title>SexGPT</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="{{ url_for('static', filename='layout/styles/layout.css') }}" rel="stylesheet" type="text/css" media="all">
@@ -27,33 +27,22 @@
   <nav id="mainav" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <ul class="clear">
-      <li class="active"><a href="index.html">Home</a></li>
-      <li><a class="drop" href="#">Pages</a>
+      <li class="active"><a href="#">Home</a></li>
+      <li><a class="drop" href="#">Topics</a>
         <ul>
-          <li><a href="pages/gallery.html">Gallery</a></li>
-          <li><a href="pages/full-width.html">Full Width</a></li>
-          <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
-          <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-          <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          <li><a href="#">Anatomy and Physiology</a></li>
+          <li><a href="#">Reproductive Health</a></li>
+          <li><a href="#">Contraception and Birth Control</a></li>
+          <li><a href="#">STIs</a></li>
+          <li><a href="#">Healthy Relationships</a></li>
+          <li><a href="#">Consent</a></li>
         </ul>
       </li>
-      <li><a class="drop" href="#">Dropdown</a>
-        <ul>
-          <li><a href="#">Level 2</a></li>
-          <li><a class="drop" href="#">Level 2 + Drop</a>
-            <ul>
-              <li><a href="#">Level 3</a></li>
-              <li><a href="#">Level 3</a></li>
-              <li><a href="#">Level 3</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Level 2</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Link Text</a></li>
-      <li><a href="#">Link Text</a></li>
-      <li><a href="#">Link Text</a></li>
-      <li><a href="#">Long Link Text</a></li>
+      <li><a href="#">Solution</a></li>
+      <li><a href="#">Treatment</a></li>
+      <li><a href="#">FAQs</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
     </ul>
     <!-- ################################################################################################ -->
   </nav>
@@ -70,8 +59,41 @@
       <p>Welcome to TeenEdge, your trusted guide through the maze of adolescence! At TeenEdge, we believe that knowledge is power, especially when it comes to navigating the challenges and questions that arise during the teen years.
 
       </p>
-      <footer><a class="btn" href="#">Let's Explore</a></footer>
+      <footer><a class="btn" href="/app" target="_blank">Let's Explore</a></footer>
     </article>
+    <!-- <form action="{{ url_for('chat') }}" method="post">
+      <label>Gender</label>
+      <select id="gender" name="gender" oninput="generateSentence()">
+          <option value=""></option>
+          <option value="Man">Man</option>
+          <option value="Women">Women</option>
+      </select><br/>
+      <label>Age</label>
+      <div class="slider"><input type="range" min="0" max="100" value="20" oninput="rangeValue.innerText = this.value"><p id="rangeValue">20</p></div> 
+   
+      <select id="category" name="category" oninput="generateSentence()">
+          <option value=""></option>
+          <option value="Heterosexual">Heterosexual</option>
+          <option value="Lesbian">Lesbian</option>
+          <option value="Gay">Gay</option>
+          <option value="Bisexual">Bisexual</option>
+          <option value="Transgender">Transgender</option>
+          <option value="Queer">Queer</option>
+          <option value="Intersex">Intersex</option>
+      </select><br/>
+      <label>Response</label>
+      <select id="responseType" oninput="generateSentence()">
+          <option value=""></option>
+          <option value="General">General</option>
+          <option value="Smart">Smart</option>
+          
+      </select><br/>
+      <label for="user_message">Enter your message:</label>
+      <input type="hidden" id="user_message" name="user_message" required>
+
+      <div id="output" class="alert alert-info"></div>
+      <button type="submit">Send</button>
+  </form> -->
     <!-- ################################################################################################ -->
   </div>
 </div>
