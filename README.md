@@ -1,5 +1,6 @@
-# TeenEdge
-Chat bot about sex education
+# TeenEdge- empowering teens with knowledge and confidence
+
+Welcome to TeenEdge, your trusted guide through the maze of adolescence! At TeenEdge, we believe that knowledge is power, especially when it comes to navigating the challenges and questions that arise during the teen years.
 
 ## Installation step
 
