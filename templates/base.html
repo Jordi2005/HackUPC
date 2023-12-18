@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% block title %}TeenEdge{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="{{ url_for('static', filename='layout/styles/layout.css') }}" rel="stylesheet" type="text/css" media="all">
+    {% block head %}{% endblock %}
+</head>
+
+<body id="top">
+    <div class="wrapper row1">
+        <header id="header" class="hoc clear">
+            <!-- Header content -->
+            {% block header %}
+            <div id="logo" class="fl_left">
+                <h1><a href="#">TeenEdge</a></h1>
+                <p>Empowering Teens with Knowledge and Confidence</p>
+            </div>
+            <div id="quickinfo" class="fl_right">
+                <!-- Additional header info -->
+            </div>
+            {% endblock %}
+        </header>
+        <nav id="mainav" class="hoc clear">
+            <!-- Navigation menu -->
+            {% block navigation %}
+            <ul class="clear">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a class="drop" href="#">Topics</a>
+                  <ul>
+                    <li><a href="#">Anatomy and Physiology</a></li>
+                    <li><a href="#">Reproductive Health</a></li>
+                    <li><a href="#">Contraception and Birth Control</a></li>
+                    <li><a href="#">STIs</a></li>
+                    <li><a href="#">Healthy Relationships</a></li>
+                    <li><a href="#">Consent</a></li>
+                  </ul>
+                </li>
+                <li><a href="/sti">STI/STD</a></li>
+                <li><a href="/sa">Social Activity</a></li>
+                <li><a href="/photo-gallery">Photo Gallery</a></li>
+                <li><a href="/about-us">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+              </ul>
+            {% endblock %}
+        </nav>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <div class="wrapper row5">
+        <footer id="footer" class="hoc clear">
+            <!-- Footer content -->
+            {% block footer %}
+            <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+            <p class="fl_right">Template by <a target="_blank" href="#" title="hack">Online SexEdu</a></p>
+            {% endblock %}
+        </footer>
+    </div>
+
+    <!-- JAVASCRIPTS -->
+    <script src="{{ url_for('static', filename='layout/scripts/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='layout/scripts/jquery.backtotop.js') }}"></script>
+    <script src="{{ url_for('static', filename='layout/scripts/jquery.mobilemenu.js') }}"></script>
+</body>
+
+</html>

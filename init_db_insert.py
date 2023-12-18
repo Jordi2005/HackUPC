@@ -14,14 +14,16 @@ data_to_insert = {
     'gender': 'Male',
     'age': 25,
     'category': 'General',
+    'social_activity': "Barcelona Carnival 2",
+    "stistd": "Hepa B",
     'timestamp': datetime.now()
 }
 
 # Insert data into user_question_bank table
 cursor.execute('''
     INSERT INTO user_question_bank (
-        question, user_question, response, counter, gender, age, category, timestamp
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        question, user_question, response, counter, gender, age, category, social_activity, stistd, timestamp
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 ''', (
     data_to_insert['question'],
     data_to_insert['user_question'],
@@ -30,6 +32,8 @@ cursor.execute('''
     data_to_insert['gender'],
     data_to_insert['age'],
     data_to_insert['category'],
+    data_to_insert['social_activity'],
+    data_to_insert['stistd'],
     data_to_insert['timestamp']
 ))
 

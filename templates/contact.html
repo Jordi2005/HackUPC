@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}TeenEdge - Home{% endblock %}
+
+{% block head %}
+<!-- Additional head content if needed -->
+{% endblock %}
+
+{% block content %}
+<hr class="btmspace-80">
+      <section>
+        <div class="sectiontitle">
+          
+          <h1>Contact Us</h1>
+          <h6 class="heading">Please don't contact with US</h6>
+          <p>We'd love to hear from you! If you have any questions or feedback, please don't hesitate to contact us.</p>
+      
+          <div class="contact-info">
+              <p><strong>Email:</strong> <a href="mailto:info@teenedge.com">info@teenedge.com</a></p>
+              <p><strong>Address:</strong> 123 TeenEdge Street</p>
+          </div>
+          </p>
+        </div>
+
+      </section>
+      <!-- ################################################################################################ -->
+      <!-- / main body -->
+      <div class="clear"></div>
+    </main>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row2">
+    <figure class="hoc container clear clients"> 
+      <!-- ################################################################################################ -->
+      <ul class="nospace group">
+        <li class="one_quarter first"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/01.png') }}" alt=""></a></li>
+        <li class="one_quarter"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/02.png') }}" alt=""></a></li>
+        <li class="one_quarter"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/04.png') }}" alt=""></a></li>
+        <li class="one_quarter"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/07.png') }}" alt=""></a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </figure>
+  </div>
+{% endblock %}

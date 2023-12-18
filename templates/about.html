@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %}TeenEdge - Home{% endblock %}
+
+{% block head %}
+<!-- Additional head content if needed -->
+{% endblock %}
+
+{% block content %}
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+  }
+  h1 {
+      color: #333;
+  }
+  p {
+      line-height: 1.5;
+      color: #666;
+      text-align: left;
+  }
+</style>
+      <section>
+        <div class="sectiontitle">
+          <h6 class="heading">About Us</h6>
+
+          <p>TeenEdge is a passionate team of diverse individuals united by the common goal of empowering teens with knowledge and confidence. Led by our visionary project creator, Taiabur Rahman, we bring a unique blend of skills, perspectives, and experiences to the BitsxlaMarató 2023 Hackathon. Our mission is to develop impactful solutions that address the challenges faced by teenagers in the realm of sexual and reproductive health.</p>
+      
+          <h2>Our Project</h2>
+          <p>In the spirit of BitsxlaMarató 2023, TeenEdge is committed to creating innovative solutions that go beyond conventional approaches. We recognize the importance of addressing the complexities surrounding sexual and reproductive health for teenagers, and our project is dedicated to bridging the gap by providing comprehensive knowledge and fostering confidence in this critical area of their lives.</p>
+      
+          <h2>Meet the Team</h2>
+          <ul>
+              <li><strong>Taiabur Rahman (@taiaburbd):</strong> Our fearless leader and project creator, Taiabur brings a wealth of experience and passion for creating positive change. With a vision for empowering teens, he is the driving force behind TeenEdge.</li>
+              <li><strong>Victor Ariño Pellejero (@vTH0R):</strong> A dedicated team member with a keen interest in technology and its potential to make a difference, Victor is committed to leveraging his skills for the betterment of teen sexual and reproductive health.</li>
+              <li><strong>AlvaroFrancoHackUPC1 (@AlvaroFrancoHackUPC1):</strong> A skilled hacker and creative thinker, Alvaro is an integral part of our team, contributing his expertise to develop cutting-edge solutions that will have a lasting impact.</li>
+              <li><strong>Jordi2005 (@Jordi2005):</strong> Jordi brings a fresh perspective and youthful energy to the team. Committed to making a difference in the lives of teenagers, he plays a crucial role in our collective efforts.</li>
+          </ul>
+      
+          <h2>Our Vision</h2>
+          <p>At TeenEdge, we envision a world where teenagers are equipped with the knowledge and confidence to navigate the complexities of sexual and reproductive health. Through our participation in the BitsxlaMarató 2023 Hackathon, we are determined to contribute innovative solutions that empower teens, foster healthy relationships, and promote overall well-being.</p>
+      
+          <p>As we embark on this exciting journey, we invite you to join us in making a meaningful impact on the lives of teenagers. Together, let's push boundaries, challenge norms, and create a future where every teen has the tools they need to thrive in matters of sexual and reproductive health.</p>
+      
+        </div>
+
+      </section>
+      <!-- ################################################################################################ -->
+      <!-- / main body -->
+      <div class="clear"></div>
+    </main>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row2">
+    <figure class="hoc container clear clients"> 
+      <!-- ################################################################################################ -->
+      <ul class="nospace group">
+        <li class="one_quarter first"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/01.png') }}" alt=""></a></li>
+        <li class="one_quarter"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/02.png') }}" alt=""></a></li>
+        <li class="one_quarter"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/04.png') }}" alt=""></a></li>
+        <li class="one_quarter"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/07.png') }}" alt=""></a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </figure>
+  </div>
+{% endblock %}

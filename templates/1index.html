@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>TeenEdge</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{{ url_for('static', filename='layout/styles/layout.css') }}" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="#">TeenEdge</a></h1>
+      <p>Empowering Teens with Knowledge and Confidence</p>
+    </div>
+    <div id="quickinfo" class="fl_right">
+
+    </div>
+    <!-- ################################################################################################ -->
+  </header>
+  <nav id="mainav" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="clear">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a class="drop" href="#">Topics</a>
+        <ul>
+          <li><a href="#">Anatomy and Physiology</a></li>
+          <li><a href="#">Reproductive Health</a></li>
+          <li><a href="#">Contraception and Birth Control</a></li>
+          <li><a href="#">STIs</a></li>
+          <li><a href="#">Healthy Relationships</a></li>
+          <li><a href="#">Consent</a></li>
+        </ul>
+      </li>
+      <li><a href="#">STI/STD</a></li>
+      <li><a href="#">Social Activity</a></li>
+      <li><a href="#">FAQs</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </nav>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url('{{ url_for("static", filename="images/banner1.png") }}');">
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article>
+      <p>Empowering Teens with Knowledge and Confidence</p>
+      <h3 class="heading">TeenEdge</h3>
+      <p>Welcome to TeenEdge, your trusted guide through the maze of adolescence! At TeenEdge, we believe that knowledge is power, especially when it comes to navigating the challenges and questions that arise during the teen years.
+
+      </p>
+      <footer><a class="btn" href="/app" target="_blank">Let's Explore</a></footer>
+    </article>
+    <!-- <form action="{{ url_for('chat') }}" method="post">
+      <label>Gender</label>
+      <select id="gender" name="gender" oninput="generateSentence()">
+          <option value=""></option>
+          <option value="Man">Man</option>
+          <option value="Women">Women</option>
+      </select><br/>
+      <label>Age</label>
+      <div class="slider"><input type="range" min="0" max="100" value="20" oninput="rangeValue.innerText = this.value"><p id="rangeValue">20</p></div> 
+   
+      <select id="category" name="category" oninput="generateSentence()">
+          <option value=""></option>
+          <option value="Heterosexual">Heterosexual</option>
+          <option value="Lesbian">Lesbian</option>
+          <option value="Gay">Gay</option>
+          <option value="Bisexual">Bisexual</option>
+          <option value="Transgender">Transgender</option>
+          <option value="Queer">Queer</option>
+          <option value="Intersex">Intersex</option>
+      </select><br/>
+      <label>Response</label>
+      <select id="responseType" oninput="generateSentence()">
+          <option value=""></option>
+          <option value="General">General</option>
+          <option value="Smart">Smart</option>
+          
+      </select><br/>
+      <label for="user_message">Enter your message:</label>
+      <input type="hidden" id="user_message" name="user_message" required>
+
+      <div id="output" class="alert alert-info"></div>
+      <button type="submit">Send</button>
+  </form> -->
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <section id="introblocks">
+      <div class="sectiontitle">
+        <h6 class="heading">Explore Comprehensive Resources</h6>
+        <p>Dive into a wealth of information on sexuality, relationships, and personal well-being. Our carefully curated content covers a range of topics, from the basics of anatomy and puberty to the intricacies of healthy relationships and consent.
+
+        </p>
+      </div>
+      <ul class="nospace group">
+        <li class="one_third first">
+          <article><i class="fa fa-futbol-o"></i>
+            <h6 class="heading font-x1"><a href="#">Safe, Judgment-Free Zone</a></h6>
+            <p>We understand that talking about sex and relationships can be sensitive. TeenEdge provides a safe and inclusive space for teens to explore, learn, and ask questions without fear of judgment. Our team of experts is here to provide accurate, reliable information that respects your curiosity and privacy.
+
+              [<a href="#">&hellip;</a>]</p>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><i class="fa fa-linode"></i>
+            <h6 class="heading font-x1"><a href="#">Real Stories, Real Advice</a></h6>
+            <p>Connect with real stories from teens who have faced similar situations and challenges. Learn from their experiences and gain valuable insights that can help you make informed decisions in your own life.
+
+              [<a href="#">&hellip;</a>]</p>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><i class="fa fa-s15"></i>
+            <h6 class="heading font-x1"><a href="#">Celebrate Diversity</a></h6>
+            <p>TeenEdge celebrates the diversity of identities and experiences. We provide inclusive and affirming content that recognizes and respects the spectrum of sexual orientations, gender identities, and cultural backgrounds.
+
+              [<a href="#">&hellip;</a>]</p>
+          </article>
+        </li>
+      </ul>
+    </section>
+    <!-- ################################################################################################ -->
+    <hr class="btmspace-80">
+    <!-- ################################################################################################ -->
+    <section>
+      <div class="sectiontitle">
+        <h6 class="heading">Photo Gallery</h6>
+        <p>Immerse yourself in our captivating photo gallery, featuring visuals that complement and enhance your learning experience. From informative infographics to engaging illustrations, our gallery is designed to make learning about sexual health and well-being both educational and visually appealing.
+
+        </p>
+      </div>
+      <ul class="nospace group overview">
+        
+        {% for row in questions %}
+        <li class="one_third">
+          <figure>
+            <a href="#"><img src="{{ url_for('static', filename='gallery/0' + loop.index|string + '.jpg') }}" alt=""></a>
+            <figcaption>
+              <p>{{ row[2] }}</p>
+            </figcaption>
+          </figure>
+        </li>
+      {% endfor %}
+
+      </ul>
+    </section>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper coloured">
+  <article class="hoc cta clear"> 
+    <!-- ################################################################################################ -->
+    <h6 class="three_quarter first">Enim nulla nec eros malesuada ligula nec finibus</h6>
+    <footer class="one_quarter"><a class="btn" href="#">Congue venenatis &raquo;</a></footer>
+    <!-- ################################################################################################ -->
+  </article>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h6 class="heading">Et ipsum suscipit sit amet</h6>
+      <p>Molestie dolor blandit mauris porta quam erat ut laoreet velit</p>
+    </div>
+    <ul class="nospace group latest">
+      <li class="one_half first">
+        <article>
+          <div class="excerpt">
+            <ul class="nospace meta">
+              <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
+              <li><i class="fa fa-tag"></i> <a href="#">Category Name</a></li>
+            </ul>
+            <h6 class="heading">Tempus at donec finibus</h6>
+            <p>Ex quis ullamcorper lobortis quisque imperdiet semper mi vitae aliquet justo feugiat sodales in quis velit vitae risus malesuada varius aenean diam lacus vestibulum vel erat elementum [<a href="#">&hellip;</a>]</p>
+            <footer><a href="#">Read More &raquo;</a></footer>
+          </div>
+          <time datetime="2045-04-06T08:15+00:00"><strong>06</strong> <em>Apr</em></time>
+        </article>
+      </li>
+      <li class="one_half">
+        <article>
+          <div class="excerpt">
+            <ul class="nospace meta">
+              <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
+              <li><i class="fa fa-tag"></i> <a href="#">Category Name</a></li>
+            </ul>
+            <h6 class="heading">Lobortis mi suspendisse</h6>
+            <p>Consequat dui dolor sit amet tincidunt erat sollicitudin id ut vel posuere eros nunc id ipsum mi aenean pulvinar ultrices blandit duis iaculis diam laoreet placerat vitae consequat [<a href="#">&hellip;</a>]</p>
+            <footer><a href="#">Read More &raquo;</a></footer>
+          </div>
+          <time datetime="2045-04-05T08:15+00:00"><strong>05</strong> <em>Apr</em></time>
+        </article>
+      </li>
+    </ul>
+    <footer class="center"><a class="btn" href="#">View All Posts &raquo;</a></footer>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <figure class="hoc container clear clients"> 
+    <!-- ################################################################################################ -->
+    <ul class="nospace group">
+      <li class="one_quarter first"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/01.png') }}" alt=""></a></li>
+      <li class="one_quarter"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/02.png') }}" alt=""></a></li>
+      <li class="one_quarter"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/04.png') }}" alt=""></a></li>
+      <li class="one_quarter"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/07.png') }}" alt=""></a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </figure>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+      <h6 class="heading">Est aenean fermentum</h6>
+      <ul class="nospace btmspace-30 linklist contact">
+        <li><i class="fa fa-map-marker"></i>
+          <address>
+          Street Name &amp; Number, Town, Postcode/Zip
+          </address>
+        </li>
+        <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
+        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+      </ul>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Ante volutpat iaculis</h6>
+      <ul class="nospace linklist">
+        <li><a href="#">Ipsum eu urna tristique</a></li>
+        <li><a href="#">Tempor nunc aliquet</a></li>
+        <li><a href="#">Ipsum sit amet mollis</a></li>
+        <li><a href="#">Ullamcorper odio velit</a></li>
+        <li><a href="#">Vulputate magna at rhoncus</a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Nisl commodo ut nam</h6>
+      <ul class="nospace linklist">
+        <li><a href="#">Turpis diam eget quam in</a></li>
+        <li><a href="#">Blandit sed nulla id tempor</a></li>
+        <li><a href="#">Duis interdum ligula at</a></li>
+        <li><a href="#">Lectus venenatis blandit</a></li>
+        <li><a href="#">Nulla molestie tellus</a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Aliquam risus dolor at</h6>
+      <p class="nospace btmspace-15">Ultricies neque sollicitudin sit amet phasellus vel est quam vivamus finibus.</p>
+      <form method="post" action="#">
+        <fieldset>
+          <legend>Newsletter:</legend>
+          <input class="btmspace-15" type="text" value="" placeholder="Name">
+          <input class="btmspace-15" type="text" value="" placeholder="Email">
+          <button type="submit" value="submit">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{{ url_for('static', filename='layout/scripts/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='layout/scripts/jquery.backtotop.js') }}"></script>
+<script src="{{ url_for('static', filename='layout/scripts/jquery.mobilemenu.js') }}"></script>
+</body>
+</html>

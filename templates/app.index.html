@@ -4,55 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask Chat App</title>
+    <title>SEX Chat App</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Flask Chat App</h1>
+    <div class="container">
+    <h1>sexChat App</h1>
     <form action="{{ url_for('chat') }}" method="post">
-        <label>Gender</label>
-        <select id="gender" name="gender" oninput="generateSentence()">
+        <strong>General</strong>
+        <div class="card">
+            <div class="card-body">
+                <label>Gender</label>
+                <select id="gender" name="gender" oninput="generateSentence()">
+                    <option value=""></option>
+                    <option value="Home">Home</option>
+                    <option value="Dona">Dona</option>
+                    <option value="Non-Binary">Non-Binary</option>
+                    
+                </select><br/>
+                <label>Age</label>
+                <select id="age" name="age" oninput="generateSentence()">
+                    <option value=""></option>
+                    <option value="Less than 12 years">Less than 12 years</option>
+                    <option value="12 years old">12 years old</option>
+                    <option value="16 years old">16 years old</option>
+                    <option value="18 years old">18 years old</option>
+                    <option value="More than 18 years old">More than 18 years old</option>
+                </select><br/>
+                <label>Category</label>
+                <select id="category" name="category" oninput="generateSentence()">
+                    <option value=""></option>
+                    <option value="Heterogeneous">Heterogeneous</option>
+                    <option value="Lesbian">Lesbian</option>
+                    <option value="Gay">Gay</option>
+                    <option value="Bisexual">Bisexual</option>
+                    <option value="Transgender">Transgender</option>
+                    <option value="Queer">Queer</option>
+                    <option value="Intersex">Intersex</option>
+                </select><br/>
+            </div>
+        </div>
+        <strong>Sexually transmitted infections (STIs) or sexually transmitted diseases (STDs)</strong>
+        <div class="card">
+            <div class="card-body">
+
+        <label for="stiList">Select an STI/STD:</label>
+        <select id="stiList" name="stiList" oninput="generateSentence()">
             <option value=""></option>
-            <option value="Home">Home</option>
-            <option value="Dona">Dona</option>
-        </select><br/>
-        <label>Age</label>
-        <select id="age" name="age" oninput="generateSentence()">
-            <option value=""></option>
-            <option value="Less than 12 years">Less than 12 years</option>
-            <option value="12 years old">12 years old</option>
-            <option value="16 years old">16 years old</option>
-            <option value="18 years old">18 years old</option>
-            <option value="More than 18 years old">More than 18 years old</option>
-        </select><br/>
-        <label>Category</label>
-        <select id="category" name="category" oninput="generateSentence()">
-            <option value=""></option>
-            <option value="Heterogeneous">Heterogeneous</option>
-            <option value="Lesbian">Lesbian</option>
-            <option value="Gay">Gay</option>
-            <option value="Bisexual">Bisexual</option>
-            <option value="Transgender">Transgender</option>
-            <option value="Queer">Queer</option>
-            <option value="Intersex">Intersex</option>
-        </select><br/>
+            <option value="HIV">HIV (Human Immunodeficiency Virus)</option>
+            <option value="Syphilis">Syphilis</option>
+            <option value="Gonorrhea">Gonorrhea</option>
+            <option value="Chlamydia">Chlamydia</option>
+            <option value="Herpes">Herpes (Herpes Simplex Virus)</option>
+            <option value="HPV">HPV (Human Papillomavirus)</option>
+            <option value="HepatitisB">Hepatitis B</option>
+            <option value="HepatitisC">Hepatitis C</option>
+            <option value="Trichomoniasis">Trichomoniasis</option>
+            <option value="BV">Bacterial Vaginosis (BV)</option>
+            <option value="MycoplasmaGenitalium">Mycoplasma genitalium</option>
+          </select><br/>
+            </div>
+        </div>
+        <strong>Social Activity</strong>
+        <div class="card">
+            <div class="card-body">
+                <label for="activitySelect">Social Activity:</label>
+                <select id="activitySelect" name="activitySelect" oninput="generateSentence()">
+                    <option value=""></option>
+                    <option value="Castells (Human Towers)">Castells (Human Towers)</option>
+                    <option value="Sardana Dance">Sardana Dance</option>
+                    <option value="Correfoc (Fire Run)">Correfoc (Fire Run)</option>
+                    <option value="Cercavila (Parade)">Cercavila (Parade)</option>
+                    <option value="Festes Majors (Local Festivals)">Festes Majors (Local Festivals)</option>
+                    <option value="Calcotada">Calcotada</option>
+                    <option value="Barcelona Carnival">Barcelona Carnival</option>
+                    <option value="Catalan Cuisine Workshops">Catalan Cuisine Workshops</option>
+                    <option value="Gegants i Capgrossos (Giants and Big-Heads)">Gegants i Capgrossos (Giants and Big-Heads)</option>
+                    <option value="Trobada de Bastoners (Stick Dance Meetings)">Trobada de Bastoners (Stick Dance Meetings)</option>
+                    <option value="Catalan Folk Music Concerts">Catalan Folk Music Concerts</option>
+                    <option value="Trobada de Grallers (Shawm Players Meeting)">Trobada de Grallers (Shawm Players Meeting)</option>
+                </select>
+            </div>
+        </div>
+
         <label>Response</label>
-        <select id="responseType" oninput="generateSentence()">
+        <select id="responseType"  oninput="generateSentence()">
             <option value=""></option>
             <option value="General">General</option>
             <option value="Smart">Smart</option>
         </select><br/>
-        <label for="user_message">Enter your message:</label>
-        <input type="hidden" id="user_message" name="user_message" required>
+        <label for="user_message">Auto Generate / Enter your query:</label>
+        <input type="text" id="user_message"  class="col-md-12" name="user_message" required>
         <!-- <div id="input_txt"></div> -->
         <div id="output" class="alert alert-info"></div>
-        <button type="submit">Send</button>
+        <button type="submit" class="btn btn-warning">Send</button>
     </form>
-
     
-
     <div id="response" class="alert alert-success"></div>
     <h1>Top 6 Questions</h1>
     <ul>
@@ -61,11 +110,15 @@
         {% endfor %}
     </ul>
     <h1>Top 6 Questions: all data</h1>
-    <ul>
+    <table class="table table-sm">
         {% for row in questions %}
-            <li>{{ row}}</li>
+        <tr>
+            <td>{{ row[2]}}</td>
+            <td>{{ row[4]}}</td>
+            <td>{{ row[5]}}</td>
+        </tr>
         {% endfor %}
-    </ul>
+    </table>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.querySelector('form');
@@ -75,7 +128,7 @@
                 event.preventDefault();
                 const formData = new FormData(form);
                 var userMessage = document.getElementById("user_message").value;
-                // document.getElementById("input_txt").innerText = userMessage
+                responseDiv.innerText = ""
 
                 fetch(form.action, {
                     method: 'POST',
@@ -83,7 +136,7 @@
                 })
                 .then(response => response.text())
                 .then(data => {
-                    responseDiv.innerText = `Server says: ${data}`;
+                    responseDiv.innerText = ` ${data}`;
 
                 })
                 .catch(error => {
@@ -98,14 +151,19 @@
             var category = document.getElementById("category").value;
             var responseType = document.getElementById("responseType").value;
             var userMessage = document.getElementById("user_message").value;
-
+            var stiList = document.getElementById("stiList").value;
+            var activitySelect = document.getElementById("activitySelect").value;
+            
             // Generate a sentence based on selected values
             var sentence = "I am ";
             if (age) sentence += age + ", ";
             if (gender) sentence += gender + ", Like ";
             
-            if (category) sentence += category + " sexcual activeity, Please suggest ";
-            if (responseType) sentence += responseType + " advice for me ";
+            if (category) sentence += category + " sexcual activeity,  ";
+            if (stiList) sentence += stiList + " sexually transmitted infections (STIs) or sexually transmitted diseases (STDs) affected solution,  ";
+            if (activitySelect) sentence += " looking "+ activitySelect + " activity in catatalonia, ";
+            
+            if (responseType) sentence += "Please suggest " + responseType + " advice for me ";
             // if (userMessage) sentence += "and your message is: '" + userMessage + "'.";
 
             // Display the generated sentence in the output div
@@ -113,5 +171,6 @@
             document.getElementById("user_message").value = sentence.trim(); // Trim to remove trailing comma and space
         }
     </script>
+    </div>
 </body>
 </html>

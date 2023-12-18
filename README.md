@@ -13,9 +13,6 @@ Chat bot about sex education
 
 ## Environment 
 
-  
-## Presentation
-TeenEdge SExEduction Presentation [`presentation/presentation.pdf`](https://github.com/Jordi2005/HackUPC/blob/main/presentation/presentation.pdf)
 
 ## Technologies
 Project is created with: 

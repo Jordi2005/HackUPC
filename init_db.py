@@ -15,7 +15,9 @@ cursor.execute('''
         counter INTEGER,
         gender TEXT,
         age INTEGER,
-        category TEXT,
+        category TEXT, 
+        social_activity TEXT,
+        stistd TEXt,
         timestamp DATETIME
     )
 ''')

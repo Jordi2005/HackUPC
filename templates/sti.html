@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}TeenEdge - Home{% endblock %}
+
+{% block head %}
+<!-- Additional head content if needed -->
+{% endblock %}
+
+{% block content %}
+<hr class="btmspace-80">
+  <div class="wrapper row3">
+    <section class="hoc container clear"> 
+      <!-- ################################################################################################ -->
+      <div class="sectiontitle">
+        <h6 class="heading">Sexually transmitted infections (STIs) or sexually transmitted diseases (STDs) solution</h6>
+        <p>Molestie dolor blandit mauris porta quam erat ut laoreet velit</p>
+      </div>
+      <ul class="nospace group latest">
+        {% for row in questions %}
+        <li class="">
+          <article>
+            <div class="excerpt"> 
+              <ul class="nospace meta">
+                <li><i class="fa fa-user"></i> <a href="#">{{row[6]}}</a></li>
+                <li><i class="fa fa-tag"></i> <a href="#">{{row[7]}}</a></li>
+                <li><i class="fa fa-tag"></i> <a href="#">{{row[8]}}</a></li>
+              </ul>
+              <h6 class="heading">{{row[2]}}</h6>
+              <p>{{row[3]}}</p>
+            </div>
+            <time datetime="{{row[9]}}"><strong>17</strong> <em>Dec</em></time>
+          </article>
+        </li>
+        {% endfor %}
+        
+      </ul>
+      <footer class="center"><a class="btn" href="#">View All Posts &raquo;</a></footer>
+      <!-- ################################################################################################ -->
+    </section>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row2">
+    <figure class="hoc container clear clients"> 
+      <!-- ################################################################################################ -->
+      <ul class="nospace group">
+        <li class="one_quarter first"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/01.png') }}" alt=""></a></li>
+        <li class="one_quarter"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/02.png') }}" alt=""></a></li>
+        <li class="one_quarter"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/04.png') }}" alt=""></a></li>
+        <li class="one_quarter"><a href="#"><img src="{{ url_for('static', filename='images/demo/gallery/07.png') }}" alt=""></a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </figure>
+  </div>
+{% endblock %}
